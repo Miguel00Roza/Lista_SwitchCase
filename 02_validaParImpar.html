@@ -6,10 +6,25 @@
     */
 
     //ENTRADA
-
+    let numero = Number(prompt("Insira um numero inteiro:"));
     
     //PROCESSAMENTO
-
+    switch (Number.isInteger(numero)) {
+        case true:
+            switch (numero % 2 === 0) {
+                case true:
+                    document.write("Numero é par");
+                    break;
+            
+                default:
+                    document.write("Numero é impar");
+                    break;
+            }
+            break;
+        default:
+            document.write("Numero não é inteiro");
+            break;
+    }
     
     //SAÍDA
 

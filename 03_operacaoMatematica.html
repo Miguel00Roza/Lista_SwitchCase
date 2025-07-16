@@ -9,11 +9,52 @@
     */
 
     //ENTRADA
-
-
+    let numero1 = Number(prompt("Insira o primeiro numero:"));
+    let numero2 = Number(prompt("Insira o segundo numero:"))
+    let operacao = prompt("Insira a operação que você deseja: (+ = adição | - = subtração | / = divisão | * = multiplicação)");
     //PROCESSAMENTO
-
+    let resultado;
+    let PorI;
+    let PorN;
+    let IorF;
+    switch (operacao) {
+        case "+":
+            resultado = numero1 + numero2;
+            PorI = resultado % 2 === 0;
+            PorN = resultado > 0;
+            IorF = Number.isInteger(resultado);
+            break;
+        case "-":
+            resultado = numero1 - numero2;
+            PorI = resultado % 2 === 0;
+            PorN = resultado > 0;
+            IorF = Number.isInteger(resultado);
+            break;
+        case "/":
+            resultado = numero1 / numero2;
+            PorI = resultado % 2 === 0;
+            PorN = resultado > 0;
+            IorF = Number.isInteger(resultado);
+            break;
+        case "*":
+            resultado = numero1 * numero2;
+            PorI = resultado % 2 === 0;
+            PorN = resultado > 0;
+            IorF = Number.isInteger(resultado);
+            break;
+        default:
+            document.write(`Operação invalida`);
+            break;
+    }
+    switch (PorI) {
+        case true:
+            PorI = "par"
+            break;
     
+        default:
+            PorI = "impar"
+            break;
+    }
     //SAÍDA
-
+    document.write(`O resultado é ${resultado}, ele é um numero ${PorI}, ${PorN} e ${IorF}`);
 </script>
