@@ -10,11 +10,26 @@
     */
 
     // ENTRADA
-
+    let idade = Number(prompt("Insira a idade do seu cão em anos humanos:"));
+    let porte = prompt("Insira o porte do seu cão: (P = pequeno | M = médio | G = grande)").toUpperCase();
     
     // PROCESSAMENTO
-
+    let idadeConvertida;
+    switch (porte) {
+        case "P":
+            idadeConvertida = idade * 5;
+            break;
+        case "M":
+            idadeConvertida = idade * 6;
+            break;
+        case "G":
+            idadeConvertida = idade * 7;
+            break;
+        default:
+            document.write("Porte inválido");
+            break;
+    }
     
     // SAÍDA
-
+    document.write(`A idade do seu cachorro é de ${idadeConvertida}`);
 </script>

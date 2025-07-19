@@ -12,11 +12,81 @@
     */
 
     //ENTRADA
-
+    const telefone = prompt("Você telefonou para a vitima? S-sim | N-não").toUpperCase();
+    const local = prompt("Você esteve no local do crime? S-sim | N-não").toUpperCase();
+    const perto = prompt("Você mora perto da vitima? S-sim | N-não").toUpperCase();
+    const divida = prompt("Você devia para a vitima? S-sim | N-não").toUpperCase();
+    const trabalhou = prompt("Você já trabalhou com a vitima? S-sim | N-não").toUpperCase();
     
     //PROCESSAMENTO
-
+    let respostas = 0;
+    switch (telefone) {
+        case "S":
+            respostas++;
+            break;
+        case "N":
+            break;
+        default:
+            document.write("Resposta inválida");
+            break;
+    }
+    switch (local) {
+        case "S":
+            respostas++;
+            break;
+        case "N":
+            break;
+        default:
+            document.write("Resposta inválida");
+            break;
+    }
+    switch (perto) {
+        case "S":
+            respostas++;
+            break;
+        case "N":
+            break;
+        default:
+            document.write("Resposta inválida");
+            break;
+    }
+    switch (divida) {
+        case "S":
+            respostas++;
+            break;
+        case "N":
+            break;
+        default:
+            document.write("Resposta inválida");
+            break;
+    }
+    switch (trabalhou) {
+        case "S":
+            respostas++;
+            break;
+        case "N":
+            break;
+        default:
+            document.write("Resposta inválida");
+            break;
+    }
+    let classificacao;
+    switch (respostas) {
+        case 2:
+            classificacao = "Suspeita";
+            break;
+        case 3:
+        case 4:
+            classificacao = "Cúmplice";
+            break;
+        case 5:
+            classificacao = "Assassino";
+            break;
+        default:
+            classificacao = "Inocente";
+            break;
+    }
 
     //SAÍDA
-
+    document.write(`Você é ${classificacao}`);
 </script>

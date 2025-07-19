@@ -6,11 +6,23 @@
     */
 
     // ENTRADA
-
+    let letra = prompt("Insira uma letra:").toLowerCase();
     
     // PROCESSAMENTO
-
+    let resultado;
+    switch (letra) {
+        case "a":
+        case "e":
+        case "i":
+        case "o":
+        case "u":
+            resultado = "é uma vogal";
+            break;
+        default:
+            resultado = "não é uma vogal";
+            break;
+    }
     
     // SAÍDA
-
+    document.write(`A letra ${letra} ${resultado}`);
 </script>
